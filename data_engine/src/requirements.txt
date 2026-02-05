@@ -1,0 +1,24 @@
+# Data Engine Requirements
+# Core dependencies for the data synthesis engine
+
+# Deep Learning & Inference
+torch>=2.0.0
+transformers>=4.40.0
+vllm>=0.4.0
+accelerate>=0.26.0
+
+# Distributed Computing
+ray>=2.9.0
+
+# Image Processing
+Pillow>=10.0.0
+pdf2image>=1.16.0
+
+# Data Handling
+jsonlines>=4.0.0
+pyyaml>=6.0.0
+
+# Utilities
+tqdm>=4.66.0
+requests>=2.31.0
+numpy>=1.24.0

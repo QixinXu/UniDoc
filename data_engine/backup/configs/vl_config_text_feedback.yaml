@@ -1,5 +1,5 @@
 input:
-  file_path: '/home/ma-user/work/haozhe/workspace/o1_reflection/release/generation/syn_vl_queries_v0_prompt_keypoints_72b_version2/aaa_easy_queries.json' 
+  file_path: 'generation/syn_vl_queries_v0_prompt_keypoints_72b_version2/aaa_easy_queries.json' 
 
 output:
   file_prefix: 'generation/vl_syn_easyquery_cot_train_qwen72b_text_feedback/' 
@@ -14,7 +14,7 @@ processing:
 model:
   # supported model_types: "hf", "openai", "anthropic", "vllm"
   model_type: "vllm_server"
-  model_name: "/home/ma-user/work/haozhe/workspace/o1_reflection/release/base_models/Qwen2.5-VL-72B-Instruct"
+  model_name: "PATH/TO/Qwen2.5-VL-72B-Instruct"
   model_url: "http://127.0.0.1:8701/v1/completions"
   model_args:
     beamsearch: 0

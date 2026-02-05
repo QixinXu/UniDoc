@@ -1,0 +1,56 @@
+# Thinking Pattern Synthesis Configuration
+# This configuration file is used for synthesizing thinking patterns from QA pairs.
+
+# Model configuration
+model:
+  # Model type: "vllm_server" for using vLLM inference server
+  model_type: "vllm_server"
+  
+  # Model name/path - use a VL (Vision-Language) model
+  model_name: "Qwen/Qwen2-VL-7B-Instruct"
+  
+  # Additional model arguments
+  model_args:
+    # vLLM server address (port will be set via command line)
+    url: "http://localhost"
+    
+    # Maximum tokens to generate
+    max_tokens: 4096
+    
+    # Sampling parameters (for diversity when generating candidates)
+    temperature: 0.7
+    top_p: 0.95
+
+# Input configuration
+input:
+  # Path to JSONL file(s) containing QA pairs
+  # Each line should be a JSON object with keys: question, answer, pdf_path, related_pages
+  file_path: "/path/to/your/qa_pairs.jsonl"
+  
+  # Maximum number of items to process (set to -1 for all)
+  max_num_items: 1000
+
+# Output configuration
+output:
+  # Directory prefix for output files
+  file_prefix: "./output/thinking"
+
+# Processing configuration
+processing:
+  # Synthesis mode: "initial" or "retrieval"
+  mode: "initial"
+  
+  # Whether to use iterative refinement with reference answers
+  use_refinement: true
+  
+  # Maximum number of refinement iterations
+  max_iterations: 3
+  
+  # Whether to use a judge model for feedback
+  use_judge: true
+  
+  # Maximum number of pages to load per document
+  max_pages: 20
+  
+  # Number of candidates to generate (for batch refinement)
+  num_candidates: 4
