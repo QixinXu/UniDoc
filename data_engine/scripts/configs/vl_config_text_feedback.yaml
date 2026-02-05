@@ -1,0 +1,26 @@
+input:
+  file_path: '/home/ma-user/work/haozhe/workspace/o1_reflection/release/generation/syn_vl_queries_v0_prompt_keypoints_72b_version2/aaa_easy_queries.json' 
+
+output:
+  file_prefix: 'generation/vl_syn_easyquery_cot_train_qwen72b_text_feedback/' 
+
+processing:
+  stop_thresh: 0.000000000001
+  max_step: 10
+  num_rollouts: 1
+  num_expansion: 1
+  initial_template: "student_generation_initial"
+
+model:
+  # supported model_types: "hf", "openai", "anthropic", "vllm"
+  model_type: "vllm_server"
+  model_name: "/home/ma-user/work/haozhe/workspace/o1_reflection/release/base_models/Qwen2.5-VL-72B-Instruct"
+  model_url: "http://127.0.0.1:8701/v1/completions"
+  model_args:
+    beamsearch: 0
+    port: 5757
+    max_tokens: 2000
+    top_k: 40
+    top_p: 0.95
+    temperature_range: [0.35, 0.35]
+  prompt_type: "tokenizer"

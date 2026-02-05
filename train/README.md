@@ -1,0 +1,2 @@
+We adopt LLaMA-Factory as the training framework in supervised fine-tuning and veRL as the Reinforcement Learning framework.
+We provide the training config files and scripts for supervised fine-tuning and reinforcement learning.

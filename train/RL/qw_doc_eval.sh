@@ -1,0 +1,47 @@
+set -x
+workdir=/media/cheliu/cl_code/Entropy
+export filter=False
+export rewardtype=custom
+export lossmode=vanilla
+export nsample=8
+export basemodelname=math
+export ppo_micro=8
+export maxlen=6000
+export maxtoken=32768
+export ase=False
+export sse=False
+export coeff=0.0
+export temp=1.0
+export entropy=none
+export explore=False
+export explore_loss=none
+export rbsz=64
+export tbsz=32
+export llama_ins_zero=False
+export zero=False 
+export doc=True 
+export adv=grpo
+export lr=5e-7
+export cliphigh=0.2
+export name=val${1}_${2}
+export valonly=True
+export sft_template=doc_reasoning
+# export MODEL_PATH="/media/cheliu/cl_code/Entropy/share_base_models/Qwen2.5-VL-7B-Instruct"
+# export hf_resume=${modelpath}
+# export hf_resume=/media/cheliu/cl_code/Entropy/outputs/docsft_docvle2_qw_20kv4_math_rbsz96_mbsz96/global_step_200_keep
+# export MODEL_PATH=/media/cheliu/cl_code/Entropy/mimo_vl_sft_2508
+# export hf_resume=/media/cheliu/cl_code/Entropy/outputs/docsft_docvle2_qw_20k_math_rbsz96_mbsz96/global_step_140
+# export MODEL_PATH=/media/vlm_model/Qwen2.5-VL-7B-Instruct
+export trainfile=/media/cheliu/cl_code/Entropy/doc_val/doc_val/dude_val_full.parquet
+export valfile=${3}
+# export valfile=/media/cheliu/cl_code/Entropy/doc_val/doc_val/slidevqa_test_full.parquet
+# export valfile=/media/cheliu/cl_code/Entropy/doc_val/finalvalnonsynth.parquet
+# export MODEL_PATH=${workdir}/share_base_models/Llama-3.1-8B-Instruct
+# export resume=/media/cheliu/cl_code/Entropy/outputs/qwenvl_n8_qw3_sseFalse_aseFalse_mimovl_base_realzero_filterFalse_none_rbsz128_mbsz32x8_newfix2_rbsz128_mbsz32x8_newfix2/global_step_70_keep
+export tagname=docrl_${name}
+export maxpixels=1204224
+# export maxpixels=802816
+export val_n=${valn:-"4"}
+export judge=True
+bash ${workdir}/recipe/dapo/vl_judge.sh
+
