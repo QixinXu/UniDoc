@@ -1,6 +1,6 @@
 <div align="center">
 
-# CogDoc: Towards Unified Thinking in Documents
+# UniDoc: Towards Unified Thinking in Documents
 
 <p align="center">
   <a href="https://arxiv.org/abs/2512.12658"><img src="https://img.shields.io/badge/arXiv-2512.12658-b31b1b.svg" alt="arXiv"></a>
@@ -11,7 +11,7 @@
 
 **A unified coarse-to-fine thinking framework for deep document reasoning**
 
-[Qixin Xu](https://github.com/Racktic)<sup>1*</sup>, <sup>†</sup>[Haozhe Wang](https://haozheh3.github.io/)<sup>2*</sup>, [Che Liu](https://cheliu-computation.github.io/)<sup>4</sup>, [Fangzhen Lin](https://facultyprofiles.hkust.edu.hk/profiles.php?profile=fangzhen-lin-flin)<sup>2</sup>,<sup>†</sup>[Wenhu Chen](https://wenhuchen.github.io/)<sup>3</sup>
+[Qixin Xu](https://github.com/Racktic)<sup>1*</sup>, [Haozhe Wang](https://haozheh3.github.io/)<sup>2*</sup>, [Che Liu](https://cheliu-computation.github.io/)<sup>4</sup>, [Fangzhen Lin](https://facultyprofiles.hkust.edu.hk/profiles.php?profile=fangzhen-lin-flin)<sup>2</sup>,<sup>†</sup>[Wenhu Chen](https://wenhuchen.github.io/)<sup>3</sup>
 
 <sup>1</sup>Tsinghua University, <sup>2</sup>HKUST, <sup>3</sup>University of Waterloo, <sup>4</sup>Imperial College London
 
